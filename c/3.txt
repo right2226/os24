@@ -1,0 +1,20 @@
+// Create child Process using Frok
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+int main() {
+    pid_t pid;
+    pid = fork();
+
+    if (pid < 0) {
+        fprintf(stderr, "Fork failed\n");
+        return 1;
+    } else if (pid == 0) {  // Child process
+        printf("Child process: My PID is %d. My parent's PID is %d.\n", getpid(), getppid());
+    } else {  // Parent process
+        printf("Parent process: My PID is %d. My parent's PID is %d. My child's PID is %d.\n", getpid(), getppid(), pid);
+    }
+
+    return 0;
+}
