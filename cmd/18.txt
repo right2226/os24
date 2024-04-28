@@ -1,0 +1,89 @@
+18 commands of 1st three exps
+ 1. ls
+ • Syntax: ls [options] [file/directory]
+ • Description: Lists files and directories in the current directory.
+ • Example:
+ • ls: Lists files and directories in the current directory.
+ • ls -l: Lists detailed information including permissions, owner, size, and 
+modification date.
+ • ls -a: Lists all files and directories, including hidden ones (those starting with .).
+ 2. mkdir
+ • Syntax: mkdir [directory_name]
+ • Description: Creates a new directory.
+ • Example:
+ • mkdir my_directory: Creates a directory named my_directory in the 
+current location.
+ 3. ps
+ • Syntax: ps [options]
+ • Description: Displays information about running processes.
+ • Example:
+ • ps aux: Lists all running processes with detailed information.
+ 4. chmod
+ • Syntax: chmod [permissions] [file/directory]
+ • Description: Changes file or directory permissions.
+ • Example:
+ • chmod +x script.sh: Grants execute permission to script.sh.
+ 5. chown
+ • Syntax: chown [new_owner]:[new_group] [file/directory]
+ • Description: Changes the owner and/or group of a file or directory.
+ • Example:
+ • chown user:group myfile.txt: Changes the owner of myfile.txt to 
+user and the group to group.
+ 7. grep
+ • Syntax: grep [options] [pattern] [file(s)]
+ • Description: Searches for a specified pattern in files.
+ • Example:
+• grep "error" logfile.txt: Searches for lines containing "error" in 
+logfile.txt.
+ 8. egrep and fgrep
+ • egrep: Similar to grep, supports extended regular expressions.
+ • fgrep: A faster version of grep, used for fixed-string searches.
+ 9. mv
+ • Syntax: mv [source] [destination]
+ • Description: Moves files or directories.
+ • Example:
+ • mv file.txt /path/to/destination: Moves file.txt to the specified 
+destination.
+ 10. cd
+ • Syntax: cd [directory]
+ • Description: Changes the current directory.
+ • Example:
+ • cd /path/to/directory: Changes the current directory to 
+/path/to/directory.
+ 11. rm
+ • Syntax: rm [options] [file(s)/directory]
+ • Description: Removes files or directories.
+ • Example:
+ • rm file.txt: Deletes file.txt.
+ • rm -r directory: Recursively deletes directory and its contents.
+ 12. cal
+ • Syntax: cal [month] [year]
+ • Description: Displays a calendar for a specific month and year.
+ • Example:
+ • cal: Displays the calendar for the current month.
+ • cal 4 2024: Displays the calendar for April 2024.
+ 13. time
+ • Syntax: time [command]
+ • Description: Measures the time taken to execute a command.
+ • Example:
+ • time ls: Measures the time taken to execute the ls command.
+14. man
+ • Syntax: man [command]
+ • Description: Displays the manual page for a command.
+ • Example:
+ • man ls: Displays the manual page for the ls command.
+ 15. echo
+ • Syntax: echo [text]
+ • Description: Displays text on the terminal.
+ • Example:
+ • echo "Hello, World!": Prints Hello, World! on the terminal.
+ 16. touch
+ • Syntax: touch [filename]
+ • Description: Creates an empty file or updates the access and modification times of a file.
+ • Example:
+ • touch newfile.txt: Creates a new empty file named newfile.txt.
+ 17. sudo
+ • Syntax: sudo [command]
+ • Description: Executes a command with superuser (administrative) privileges.
+ • Example:
+ • sudo apt update: Updates package information using administrative privileges.
