@@ -1,0 +1,12 @@
+For OS version and Release Number type the following and Press Enter:-
+
+#!/bin/bash
+echo "OS INFO:"
+cat /etc/os-release
+
+ Note :-
+Or Else Just Type the 3rd line from above to get OS version and Release Number 
+
+For Kernel Number Type the following and Press Enter:-
+
+ uname –a

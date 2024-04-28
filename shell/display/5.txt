@@ -1,0 +1,3 @@
+To Display top 10 processes in descending order Type the following and Press Enter:-
+
+echo "top 10 cpu consuming processes:" top -o%CPU | head -n 16

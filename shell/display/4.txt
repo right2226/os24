@@ -1,0 +1,9 @@
+
+To Display current shell home directory o.s. type, Type the following and Press Enter:- 
+
+echo $HOME
+uname –s
+
+To Display current path Type the following and Press Enter:-
+
+pwd –P

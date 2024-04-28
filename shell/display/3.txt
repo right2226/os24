@@ -1,0 +1,7 @@
+Display current log name Type the following and Press Enter:-
+
+logname
+
+Display current logged in user Type the following and Press Enter:- 
+
+Whoami

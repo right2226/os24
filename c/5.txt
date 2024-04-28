@@ -1,4 +1,4 @@
-// Best Fit Algorithm 
+ // Best Fit Algorithm 
 
 #include<stdio.h>
  #define max 25
