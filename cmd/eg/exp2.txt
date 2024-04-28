@@ -1,0 +1,23 @@
+ // EXPERIMENT NO 2
+
+ #!/bin/sh
+ echo "----------------------"
+ echo "Shell Script OSL Practical 2"
+ echo "OS INFO: "
+ cat /etc/os-release
+ uname -r
+ uname -a
+ uname -v
+ echo "----------------------"
+ echo "10 Processes in descending order: "
+ ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head -10
+ echo "Highest Memory Usage"
+ ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head -2
+ echo "----------------------"
+ echo "User Login and Name: "
+ whoami
+ logname
+ echo "$SHELL"
+ pwd
+ uname -srm
+ echo "-------------------------"
