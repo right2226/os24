@@ -1,43 +1,60 @@
 //First Fit Algorithm
 
- #include<stdio.h>
- int main() {
- // Declare Variables
- int nb,blockSize[100],n,jobSize[100],i,j,alloc[100];
- //Input initial values
- printf("Enter the number of available memory blocks: ");
- scanf("%d",&nb);
- printf("Enter the size of each memory block: \n");
- for(i=0;i<nb;i++) {
- printf("Size of block%d: ",i+1);
- scanf("%d",&blockSize[i]);
- }
- printf("Enter the number of processes: ");
- scanf("%d",&n);
- printf("Enter the size of each process: \n");
- for(i=0;i<n;i++) {
- printf("Size of process%d: ",i+1);
- scanf("%d",&jobSize[i]);
- }
- for(i=0;i<n;i++) {
- alloc[i] = -1;
- }
- // Allocate the processes
- for(i=0;i<n;i++){
-for(j=0;j<nb;j++) {
- if(blockSize[j]>jobSize[i]) {
- alloc[i]=j;
- j=nb;
- blockSize[j]=0;
- }
- }
- }
- // Print the results
- printf("Process P of {size} is allocated to block \n");
- for(i=0;i<n;i++) {
- if(alloc[i]!=-1)
- printf("Process %d of %d --> Block%d\n",i+1,jobSize[i],alloc[i]+1);
- else
- printf("Process %d of %d --> is not allocated \n",i+1,jobSize[i]);
- }
- }
+#include <stdio.h>
+
+int main() {
+    int nb, n;
+    
+    // Input number of memory blocks
+    printf("Enter the number of available memory blocks: ");
+    scanf("%d", &nb);
+    
+    // Input memory block sizes
+    int blockSize[nb];
+    printf("Enter the size of each memory block: \n");
+    for (int i = 0; i < nb; i++) {
+        printf("Size of block %d: ", i + 1);
+        scanf("%d", &blockSize[i]);
+    }
+    
+    // Input number of processes
+    printf("Enter the number of processes: ");
+    scanf("%d", &n);
+    
+    // Input process sizes
+    int jobSize[n];
+    printf("Enter the size of each process: \n");
+    for (int i = 0; i < n; i++) {
+        printf("Size of process %d: ", i + 1);
+        scanf("%d", &jobSize[i]);
+    }
+    
+    // Array to keep track of block allocation for each process (-1 means not allocated)
+    int alloc[n];
+    for (int i = 0; i < n; i++) {
+        alloc[i] = -1; // Initialize as not allocated
+    }
+    
+    // Allocate each process to a memory block using First Fit strategy
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < nb; j++) {
+            if (blockSize[j] >= jobSize[i]) {
+                alloc[i] = j; // Allocate process i to block j
+                blockSize[j] -= jobSize[i]; // Reduce the size of the allocated block
+                break; // Move to the next process
+            }
+        }
+    }
+    
+    // Print the allocation details
+    printf("Process allocation details:\n");
+    for (int i = 0; i < n; i++) {
+        if (alloc[i] != -1) {
+            printf("Process %d of size %d --> Block %d\n", i + 1, jobSize[i], alloc[i] + 1);
+        } else {
+            printf("Process %d of size %d --> Not allocated\n", i + 1, jobSize[i]);
+        }
+    }
+    
+    return 0;
+}
